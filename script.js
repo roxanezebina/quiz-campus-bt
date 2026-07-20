@@ -200,8 +200,8 @@ function renderQuestion(){
  document.querySelectorAll(".answer").forEach(btn=>btn.onclick=()=>{const a=q.answers[Number(btn.dataset.index)];scores[a.profile]++;selectedAnswers.push({questionNumber:currentQuestion+1,question:q.text,answer:a.label,profile:a.profile});currentQuestion++;currentQuestion<questions.length?renderQuestion():showResult();});
 }
 function getWinner(){const max=Math.max(...Object.values(scores));const winners=Object.keys(scores).filter(k=>scores[k]===max);return winners[Math.floor(Math.random()*winners.length)];}
-async function sendQuizData(winner){
- if (!DATA_ENDPOINT) {
+async function sendQuizData(winner) {
+  if (!DATA_ENDPOINT) {
     console.info("Suivi désactivé : DATA_ENDPOINT est vide.");
     return;
   }
@@ -221,8 +221,8 @@ async function sendQuizData(winner){
     event: params.get("event") || "non précisé",
     source: params.get("source") || "qr-code",
 
+    profile: profiles[winner].title,
     profileCode: winner,
-    profileName: profiles[winner].title,
 
     scoreCulture: scores.culture,
     scoreNature: scores.nature,
@@ -247,7 +247,7 @@ async function sendQuizData(winner){
       keepalive: true
     });
 
-    console.info("Réponse envoyée.");
+    console.info("Envoi déclenché vers Google Sheets.");
   } catch (error) {
     console.error("Envoi impossible :", error);
   }
