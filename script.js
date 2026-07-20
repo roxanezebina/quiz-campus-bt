@@ -237,14 +237,14 @@ async function sendQuizData(winner) {
   };
 
   try {
-    await fetch(DATA_ENDPOINT, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "text/plain;charset=utf-8"
+    await fetch(DATA_ENDPOINT,{
+      method:"POST",
+      mode:"no-cors",
+      headers:{
+        "Content-Type":"text/plain;charset=utf-8"
       },
-      body: JSON.stringify(payload),
-      keepalive: true
+      body:JSON.stringify(payload),
+      keepalive:true
     });
 
     console.info("Envoi déclenché vers Google Sheets.");
