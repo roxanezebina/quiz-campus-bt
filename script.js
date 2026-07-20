@@ -1,4 +1,4 @@
-const DATA_ENDPOINT = "https://script.google.com/macros/s/AKfycbwbaW6FNsS6CVY7WfHCJ8K-tULOB6G2cE7KHl0xkS1CSL2dP-He8I4v0uj6PCCt4xk2Rg/exec";
+const DATA_ENDPOINT = "https://script.google.com/macros/s/AKfycbwlJxiRPaPSCCA6YNe1sTy2_9tYrDgEuvfwQUB4SbuzFyFrYUQRCXgfjykNHezrQa9l/exec";
 const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/F7yrRukPSyhCHwSkdSdQDN";
 
 const defaultSchools = ['3iS Bordeaux',
