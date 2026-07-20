@@ -64,6 +64,14 @@ background:rgba(255,255,255,.15);backdrop-filter:blur(4px)
   object-fit:cover;
 }
 
+.portrait-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 
 /* v3 — header, hero et footer simplifiés */
 .site-header{
