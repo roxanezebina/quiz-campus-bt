@@ -208,33 +208,35 @@ async function sendQuizData(winner) {
 
   const params = new URLSearchParams(location.search);
 
-  const payload = {
-    responseId:
-      crypto.randomUUID?.() ||
-      `${Date.now()}-${Math.random()}`,
+const payload = {
+  responseId:
+    crypto.randomUUID?.() ||
+    `${Date.now()}-${Math.random()}`,
 
-    submittedAt: new Date().toISOString(),
+  submittedAt: new Date().toISOString(),
 
-    ...identityData,
+  ...identityData,
 
-    campus: params.get("campus") || "non précisé",
-    event: params.get("event") || "non précisé",
-    source: params.get("source") || "qr-code",
+  consent: document.getElementById("privacyConsent")?.checked === true,
 
-    profile: profiles[winner].title,
-    profileCode: winner,
+  campus: params.get("campus") || "non précisé",
+  event: params.get("event") || "non précisé",
+  source: params.get("source") || "qr-code",
 
-    scoreCulture: scores.culture,
-    scoreNature: scores.nature,
-    scoreEpicure: scores.epicure,
-    scoreFoodie: scores.foodie,
+  profile: profiles[winner].title,
+  profileCode: winner,
 
-    durationSeconds: startedAt
-      ? Math.round((Date.now() - startedAt.getTime()) / 1000)
-      : null,
+  scoreCulture: scores.culture,
+  scoreNature: scores.nature,
+  scoreEpicure: scores.epicure,
+  scoreFoodie: scores.foodie,
 
-    answers: selectedAnswers
-  };
+  durationSeconds: startedAt
+    ? Math.round((Date.now() - startedAt.getTime()) / 1000)
+    : null,
+
+  answers: selectedAnswers
+};
 
   try {
     await fetch(DATA_ENDPOINT,{
