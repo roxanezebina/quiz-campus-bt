@@ -188,7 +188,7 @@ $("identityForm").addEventListener("submit",e=>{
    }
  }
  identityData={firstName:$("firstName").value.trim(),lastName:$("lastName").value.trim(),email:$("email").value.trim(),school:finalSchool,birthYear:Number($("birthYear").value),createdAt:new Date().toISOString()};
- startQuiz();
+ startQuiz();consent: $("privacyConsent").checked;
 });
 
 function startQuiz(){
