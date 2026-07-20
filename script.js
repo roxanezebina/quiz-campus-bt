@@ -82,54 +82,60 @@ const defaultSchools = ['3iS Bordeaux',
 
 
 const questions = [
-{
-text:"Ton samedi parfait à Bordeaux, c'est plutôt…",
-answers:[
-{emoji:"🎨",label:"Une expo, une friperie et un café bien caché",profile:"culture"},
-{emoji:"🌿",label:"Une balade, un pique-nique et un grand bol d'air",profile:"nature"},
-{emoji:"🍷",label:"Un marché, une terrasse et un coucher de soleil entre amis",profile:"epicure"},
-{emoji:"🍜",label:"Tester LE restaurant dont tout le monde parle",profile:"foodie"}
-]},
-{
-text:"Quand tu découvres une ville, tu cherches d'abord…",
-answers:[
-{emoji:"📸",label:"Ses lieux les plus créatifs et photogéniques",profile:"culture"},
-{emoji:"🚲",label:"Ses coins tranquilles et ses itinéraires à explorer",profile:"nature"},
-{emoji:"🍹",label:"Les endroits où l'on aime se retrouver",profile:"epicure"},
-{emoji:"🥐",label:"Ses meilleures spécialités et bonnes adresses",profile:"foodie"}
-]},
-{
-text:"Ton budget étudiant part le plus facilement dans…",
-answers:[
-{emoji:"🎟️",label:"Des concerts, du cinéma ou des spectacles",profile:"culture"},
-{emoji:"🧺",label:"Des escapades et des activités en plein air",profile:"nature"},
-{emoji:"🍸",label:"Des terrasses et des sorties entre amis",profile:"epicure"},
-{emoji:"🍣",label:"Des restos, des brunchs et des cafés",profile:"foodie"}
-]},
-{
-text:"Dans ton groupe, tu es la personne qui…",
-answers:[
-{emoji:"💡",label:"Trouve toujours l'événement dont personne n'a entendu parler",profile:"culture"},
-{emoji:"🗺️",label:"Propose de sortir de la ville et d'aller voir ailleurs",profile:"nature"},
-{emoji:"🎉",label:"Lance les soirées et rassemble tout le monde",profile:"epicure"},
-{emoji:"📍",label:"Connaît les meilleures adresses où manger",profile:"foodie"}
-]},
-{
-text:"Ton dimanche idéal ressemble à…",
-answers:[
-{emoji:"📚",label:"Un musée, une librairie ou un lieu insolite",profile:"culture"},
-{emoji:"☀️",label:"Une plage, un parc ou une virée à vélo",profile:"nature"},
-{emoji:"🧺",label:"Une terrasse qui s'éternise avec les copains",profile:"epicure"},
-{emoji:"🥞",label:"Un brunch suivi d'une pâtisserie incontournable",profile:"foodie"}
-]},
-{
-text:"Le mot qui te ressemble le plus…",
-answers:[
-{emoji:"✨",label:"Curieux",profile:"culture"},
-{emoji:"🌱",label:"Libre",profile:"nature"},
-{emoji:"🥂",label:"Bon vivant",profile:"epicure"},
-{emoji:"😋",label:"Gourmand",profile:"foodie"}
-]}
+  {
+    text: "Ton samedi parfait à Bordeaux, c'est plutôt…",
+    answers: [
+      { emoji: "🍜", label: "Tester LE restaurant dont tout le monde parle", profile: "foodie" },
+      { emoji: "🌿", label: "Une balade, un pique-nique et un grand bol d'air", profile: "nature" },
+      { emoji: "🎨", label: "Une expo, une friperie et un café bien caché", profile: "culture" },
+      { emoji: "🥂", label: "Un marché, une terrasse et un coucher de soleil entre amis", profile: "epicure" }
+    ]
+  },
+  {
+    text: "Quand tu découvres une ville, tu cherches d'abord…",
+    answers: [
+      { emoji: "🍹", label: "Les endroits où l'on aime se retrouver", profile: "epicure" },
+      { emoji: "📸", label: "Ses lieux les plus créatifs et photogéniques", profile: "culture" },
+      { emoji: "🥐", label: "Ses meilleures spécialités et bonnes adresses", profile: "foodie" },
+      { emoji: "🚲", label: "Ses coins tranquilles et ses itinéraires à explorer", profile: "nature" }
+    ]
+  },
+  {
+    text: "Ton budget étudiant part le plus facilement dans…",
+    answers: [
+      { emoji: "🧺", label: "Des escapades et des activités en plein air", profile: "nature" },
+      { emoji: "🍣", label: "Des restos, des brunchs et des cafés", profile: "foodie" },
+      { emoji: "🎟️", label: "Des concerts, du cinéma ou des spectacles", profile: "culture" },
+      { emoji: "🍸", label: "Des terrasses et des sorties entre amis", profile: "epicure" }
+    ]
+  },
+  {
+    text: "Dans ton groupe, tu es la personne qui…",
+    answers: [
+      { emoji: "💡", label: "Trouve toujours l'événement dont personne n'a entendu parler", profile: "culture" },
+      { emoji: "📍", label: "Connaît les meilleures adresses où manger", profile: "foodie" },
+      { emoji: "🎉", label: "Lance les soirées et rassemble tout le monde", profile: "epicure" },
+      { emoji: "🗺️", label: "Propose de sortir de la ville et d'aller voir ailleurs", profile: "nature" }
+    ]
+  },
+  {
+    text: "Ton dimanche idéal ressemble à…",
+    answers: [
+      { emoji: "🥞", label: "Un brunch suivi d'une pâtisserie incontournable", profile: "foodie" },
+      { emoji: "📚", label: "Un musée, une librairie ou un lieu insolite", profile: "culture" },
+      { emoji: "☀️", label: "Une plage, un parc ou une virée à vélo", profile: "nature" },
+      { emoji: "🥂", label: "Une terrasse qui s'éternise avec les copains", profile: "epicure" }
+    ]
+  },
+  {
+    text: "Le mot qui te ressemble le plus…",
+    answers: [
+      { emoji: "🥂", label: "Bon vivant", profile: "epicure" },
+      { emoji: "🌱", label: "Libre", profile: "nature" },
+      { emoji: "😋", label: "Gourmand", profile: "foodie" },
+      { emoji: "✨", label: "Curieux", profile: "culture" }
+    ]
+  }
 ];
 
 const profiles={
