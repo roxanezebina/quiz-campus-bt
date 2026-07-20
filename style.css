@@ -64,7 +64,7 @@ background:rgba(255,255,255,.15);backdrop-filter:blur(4px)
   object-fit:cover;
 }
 
-.portrait-image {
+.portrait-image img{
   width: 140px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
