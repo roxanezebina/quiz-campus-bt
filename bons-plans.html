@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bons plans – Campus Bordeaux Tourisme</title>
+  <meta name="description" content="Les sites et ressources recommandés pour découvrir Bordeaux.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .resources-section{
+      width:min(1040px,calc(100% - 40px));
+      margin:0 auto;
+      padding:20px 0 100px;
+    }
+
+    .resource-card{
+      display:grid;
+      grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);
+      gap:32px;
+      align-items:center;
+      padding:18px;
+      margin-bottom:24px;
+      background:#fff;
+      border:1px solid rgba(110,47,79,.1);
+      border-radius:24px;
+      box-shadow:0 14px 38px rgba(52,31,44,.07);
+    }
+
+    .resource-card.reverse{
+      grid-template-columns:minmax(280px,.65fr) minmax(0,1.35fr);
+    }
+
+    .resource-card.reverse .resource-preview{
+      order:2;
+    }
+
+    .resource-card.reverse .resource-content{
+      order:1;
+    }
+
+    .resource-preview{
+      overflow:hidden;
+      border:1px solid rgba(110,47,79,.13);
+      border-radius:23px;
+      background:#f5f0ec;
+      box-shadow:0 16px 40px rgba(52,31,44,.1);
+    }
+
+    .browser-bar{
+      height:38px;
+      display:flex;
+      align-items:center;
+      gap:7px;
+      padding:0 14px;
+      background:#fff;
+      border-bottom:1px solid rgba(110,47,79,.08);
+    }
+
+    .browser-bar span{
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:#d8c8d0;
+    }
+
+    .screenshot-placeholder{
+      min-height:250px;
+      aspect-ratio:16/9;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      text-align:center;
+      background:
+        linear-gradient(135deg,rgba(110,47,79,.07),rgba(240,201,95,.16)),
+        #f7f2ee;
+      color:var(--accent-dark);
+    }
+
+    .screenshot-placeholder strong{
+      font-family:"Fraunces",serif;
+      font-size:clamp(1.4rem,2.5vw,2.1rem);
+    }
+
+    .screenshot-placeholder small{
+      margin-top:10px;
+      color:var(--muted);
+    }
+
+    .resource-label{
+      display:inline-block;
+      margin-bottom:12px;
+      color:var(--accent);
+      font-size:.76rem;
+      font-weight:700;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+    }
+
+    .resource-content h2{
+      margin:0 0 14px;
+      font-family:"Fraunces",serif;
+      font-size:clamp(1.7rem,3vw,2.3rem);
+      line-height:1.05;
+      color:var(--accent-dark);
+    }
+
+    .resource-content p{
+      margin:0 0 24px;
+      color:var(--muted);
+      font-size:.98rem;
+      line-height:1.6;
+    }
+
+    @media(max-width:900px){
+      .resource-card,
+      .resource-card.reverse{
+        grid-template-columns:1fr;
+        gap:20px;
+        padding:18px;
+      }
+
+      .resource-card.reverse .resource-preview,
+      .resource-card.reverse .resource-content{
+        order:initial;
+      }
+
+      .screenshot-placeholder{
+        min-height:200px;
+      }
+    }
+
+    @media(max-width:560px){
+      .resources-section{
+        width:min(100% - 22px,1120px);
+      }
+
+      .resource-card{
+        border-radius:22px;
+        padding:14px;
+      }
+
+      .resource-preview{
+        border-radius:17px;
+      }
+
+      .resource-content{
+        padding:4px 6px 10px;
+      }
+
+      .screenshot-placeholder{
+        min-height:160px;
+      }
+
+      .resource-content .primary{
+        width:100%;
+      }
+    }
+  </style>
+
+</head>
+<body data-page="plans">
+  <div data-site-header></div>
+
+
+  <main class="page-main">
+    <section class="page-intro">
+      <div class="eyebrow">À garder sous le coude</div>
+      <h1>Nos bons plans pour découvrir Bordeaux</h1>
+      <p>
+        Les sites que nous te conseillons pour sortir, visiter, marcher
+        et profiter de Bordeaux et de sa métropole.
+      </p>
+    </section>
+
+    <section class="resources-section">
+      <article class="resource-card">
+        <div class="resource-preview">
+          <div class="browser-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="cont-screenshot-bons-plans">
+            <img src="assets/capture-uadb.png">
+          </div>
+        </div>
+        <div class="resource-content">
+          <span class="resource-label">Sorties et découvertes locales</span>
+          <h2>Un Air de Bordeaux</h2>
+          <p>
+            Des idées de sorties, des événements, des bonnes adresses et des balades
+            pour profiter de Bordeaux et de toute la métropole.
+          </p>
+          <a class="primary compact" href="https://www.unairdebordeaux.fr/" target="_blank" rel="noopener">
+            Découvrir le site
+          </a>
+        </div>
+      </article>
+
+      <article class="resource-card reverse">
+        <div class="resource-preview">
+          <div class="browser-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="cont-screenshot-bons-plans">
+            <img src="assets/capture-bordeaux-tourisme.png">
+          </div>
+        </div>
+        <div class="resource-content">
+          <span class="resource-label">Visites et incontournables</span>
+          <h2>Bordeaux Tourisme</h2>
+          <p>
+            Des visites guidées, des grands événements et de nombreuses idées
+            pour explorer la ville autrement.
+          </p>
+          <a class="primary compact" href="https://www.bordeaux-tourisme.com/" target="_blank" rel="noopener">
+            Visiter le site
+          </a>
+        </div>
+      </article>
+
+      <article class="resource-card">
+        <div class="resource-preview">
+          <div class="browser-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="cont-screenshot-bons-plans">
+            <img src="assets/capture-site-ville-bordeaux.png">
+          </div>
+        </div>
+        <div class="resource-content">
+          <span class="resource-label">Vie pratique</span>
+          <h2>Bordeaux.fr</h2>
+          <p>
+            L’actualité de la Ville, son agenda, ses services et toutes les
+            informations utiles pour ton quotidien à Bordeaux.
+          </p>
+          <a class="primary compact" href="https://www.bordeaux.fr/" target="_blank" rel="noopener">
+            Voir le site
+          </a>
+        </div>
+      </article>
+
+      <article class="resource-card reverse">
+        <div class="resource-preview">
+          <div class="browser-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="cont-screenshot-bons-plans">
+            <img src="assets/capture-decouvr-pessac.png">
+          </div>
+        </div>
+        <div class="resource-content">
+          <span class="resource-label">Saison patrimoine à proximité</span>
+          <h2>Découvr’Pessac</h2>
+          <p>
+            Une saison culturelle gratuite d'avril à novembre, proche du campus Talence/Pessac. Entre sites architecturaux d’exception et espaces naturels préservés, découvrez les rendez-vous patrimoine de Pessac !
+          </p>
+          <a class="primary compact" href="https://www.pessac.fr/a-decouvrir/patrimoine/decouvrpessac-la-saison-patrimoine-537.html" target="_blank" rel="noopener">
+            Découvrir
+          </a>
+        </div>
+      </article>
+
+      <article class="resource-card">
+        <div class="resource-preview">
+          <div class="browser-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="cont-screenshot-bons-plans">
+            <img src="assets/capture-balades-metropole.png">
+          </div>
+        </div>
+        </div>
+        <div class="resource-content">
+          <span class="resource-label">Marcher et pédaler</span>
+          <h2>Les balades de la Métropole</h2>
+          <p>
+            Des itinéraires pour prendre l’air, marcher, courir ou pédaler
+            dans les 28 communes de Bordeaux Métropole.
+          </p>
+          <a class="primary compact" href="https://www.bordeaux-metropole.fr/a-votre-service/services-aux-particuliers/decouvrir-sortir/nature-loisirs/balades-a-pied-a-velo" target="_blank" rel="noopener">
+            Explorer les balades
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+  <div data-site-footer></div>
+
+  <script src="components.js"></script>
+</body>
+</html>

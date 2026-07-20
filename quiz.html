@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le quiz – Campus Bordeaux Tourisme</title>
+  <meta name="description" content="Réponds au quiz et découvre ton guide personnalisé de Bordeaux.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="quiz">
+  <div data-site-header></div>
+
+  <main class="page-main">
+    <section class="page-intro centered-intro">
+      <div class="eyebrow">Ton Bordeaux, ton profil</div>
+      <h1>Quel étudiant bordelais es-tu ?</h1>
+      <p>Réponds à six questions et découvre les sorties qui te correspondent.</p>
+    </section>
+    <section class="quiz-page-section">
+<div class="quiz-shell">
+        <section class="quiz-card" id="intro">
+          <div class="hero-emoji">🧭</div>
+          <h2>Prêt à trouver ton Bordeaux ?</h2>
+          <p class="lead">Réponds à six questions et découvre les sorties qui te ressemblent.</p>
+          <button class="primary" id="openFormBtn">Faire le quiz</button>
+          <p class="microcopy">Quelques informations + 6 questions · environ 2 minutes</p>
+        </section>
+
+        <section class="quiz-card hidden" id="identity">
+          <div class="eyebrow">Avant de commencer</div>
+          <h2 class="form-title">Faisons connaissance</h2>
+          <p class="form-intro">Ces informations nous aident à mieux te connaitre, pour te proposer des expériences sur-mesure !</p>
+
+          <form id="identityForm">
+            <div class="form-grid two-columns">
+              <label>
+                <span>Prénom</span>
+                <input id="firstName" name="firstName" autocomplete="given-name" required maxlength="60" placeholder="Camille">
+              </label>
+              <label>
+                <span>Nom</span>
+                <input id="lastName" name="lastName" autocomplete="family-name" required maxlength="60" placeholder="Dupont">
+              </label>
+            </div>
+
+            <label>
+              <span>École ou établissement</span>
+              <div class="combobox" id="schoolCombobox">
+                <input id="schoolSearch" autocomplete="off" role="combobox" aria-expanded="false"
+                  aria-controls="schoolOptions" placeholder="Tape le nom de ton école…" required>
+                <div class="options hidden" id="schoolOptions" role="listbox"></div>
+              </div>
+            </label>
+
+            <label class="hidden" id="otherSchoolWrap">
+              <span>Quel établissement ?</span>
+              <input id="otherSchool" maxlength="120" placeholder="Nom de ton école ou de ta formation">
+              <small>Il sera proposé lors des prochaines sessions sur cet appareil.</small>
+            </label>
+
+            <label>
+              <span>Année de naissance</span>
+              <input id="birthYear" name="birthYear" type="number" inputmode="numeric" min="1940" max="2012" required placeholder="2004">
+              <small class="funny-note">Promis, c’est uniquement pour nos statistiques (et pour vérifier si, avec nos fins de vingtaine, nous sommes déjà officiellement des antiquités...🦖)</small>
+            </label>
+
+            <label>
+              <span>Adresse e-mail</span>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="toi@exemple.fr">
+              <small>Pour pouvoir t’envoyer quelques invitations et bons plans. Pas une dissertation quotidienne.</small>
+            </label>
+
+            <label class="consent">
+              <input type="checkbox" id="privacyConsent" required>
+              <span>
+                J’ai lu les informations sur l’utilisation de mes données et j’accepte d’être recontacté ponctuellement
+                dans le cadre de Campus Bordeaux Tourisme.
+                <a href="donnees.html" target="_blank">Voir le détail</a>
+              </span>
+            </label>
+
+            <button class="primary" type="submit">Commencer le quiz</button>
+            <button class="secondary" type="button" id="backBtn">Retour</button>
+          </form>
+        </section>
+
+        <section class="quiz-card hidden" id="quiz">
+          <div class="topbar">
+            <span id="questionCount">Question 1 sur 6</span>
+            <button class="link-button" id="restartBtn" type="button">Recommencer</button>
+          </div>
+          <div class="progress" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+          <div id="questionArea"></div>
+        </section>
+
+        <section class="quiz-card result-card hidden" id="result">
+          <div class="eyebrow">Ton profil bordelais</div>
+          <div class="result-icon" id="resultIcon">✨</div>
+          <h2 id="resultTitle"></h2>
+          <p class="result-tagline" id="resultTagline"></p>
+          <p id="resultDescription"></p>
+
+          <div class="recommendations">
+            <h3>Ton Bordeaux idéal</h3>
+            <ul id="resultIdeas"></ul>
+          </div>
+
+          <a href="#" class="primary download" id="guideLink">Découvrir mon guide</a>
+
+          <div class="team-preview">
+            <div class="mini-faces" aria-label="Aperçu de l'équipe Campus">
+              <span>R</span><span>B</span><span>G</span><span>I</span><span>C</span>
+            </div>
+            <div>
+              <strong>Tu veux savoir qui se cache derrière Campus ?</strong>
+              <p>Nous sommes cinq collègues de Bordeaux Tourisme, toutes dans la vingtaine.</p>
+              <a href="equipe.html">Découvrir notre équipe et le projet →</a>
+            </div>
+          </div>
+
+          <a class="whatsapp-button" id="whatsappResult" href="#" target="_blank" rel="noopener">
+            💬 Ajoute-nous sur WhatsApp !
+          </a>
+          <button class="secondary" id="retryBtn">Refaire le quiz</button>
+        </section>
+      </div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+
+  <script src="script.js"></script>
+  <script src="components.js"></script>
+</body>
+</html>

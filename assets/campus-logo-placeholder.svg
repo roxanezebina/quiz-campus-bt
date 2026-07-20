@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="150" viewBox="0 0 520 150">
+  <rect width="520" height="150" rx="28" fill="#6e2f4f"/>
+  <circle cx="78" cy="75" r="42" fill="#fff"/>
+  <text x="78" y="91" text-anchor="middle" font-family="Georgia,serif" font-size="55" font-weight="700" fill="#6e2f4f">C</text>
+  <text x="145" y="68" font-family="Georgia,serif" font-size="42" font-weight="700" fill="#fff">Campus</text>
+  <text x="146" y="101" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="2" fill="#f1dce7">BORDEAUX TOURISME</text>
+</svg>

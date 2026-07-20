@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ecdce5"/>
+      <stop offset="1" stop-color="#f0c95f"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="650" rx="40" fill="url(#g)"/>
+  <rect x="65" y="65" width="770" height="520" rx="28" fill="none" stroke="#ffffff" stroke-width="6" stroke-dasharray="18 14" opacity=".9"/>
+  <text x="450" y="285" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#6e2f4f">PHOTO / IMAGE</text>
+  <text x="450" y="340" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#6e2f4f">Bordeaux, étudiants, sortie ou vue de la ville</text>
+</svg>
