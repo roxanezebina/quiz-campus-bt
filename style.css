@@ -65,11 +65,13 @@ background:rgba(255,255,255,.15);backdrop-filter:blur(4px)
 }
 
 .portrait-image {
-  width: 100%;
-  aspect-ratio: 4 / 5;
+  width: 140px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
+  border-radius: 24px;
   display: block;
+  margin: 0 auto 20px;
 }
 
 
