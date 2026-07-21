@@ -64,8 +64,8 @@ background:rgba(255,255,255,.15);backdrop-filter:blur(4px)
   object-fit:cover;
 }
 
-.member-card{
-  padding:16px;
+.member-card .portrait-image{
+  border-radius:20px 20px 0 0 !important;
 }
 
 .portrait-image{
